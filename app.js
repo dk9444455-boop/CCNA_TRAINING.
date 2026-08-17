@@ -53,7 +53,8 @@ form.addEventListener("submit", async function(event) {
         if (response.ok) {
             // Success response from API
             message.style.color = "green";
-            message.textContent = "Application submitted successfully!";
+            // UPDATED MESSAGE BELOW:
+            message.textContent = "Thank you! Your query has been received.";
             form.reset();
         } else {
             // Handle error response from serverless database
