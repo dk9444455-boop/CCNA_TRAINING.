@@ -1,5 +1,5 @@
 // This URL connects your frontend form to your backend Cloudflare Worker messenger.
-const API_URL = "YOUR_WORKER_URL_HERE";
+const API_URL = "https://academyccna-enroll-api.dk9444455.workers.dev";
 
 const form = document.getElementById("queryForm");
 const message = document.getElementById("formMessage");
