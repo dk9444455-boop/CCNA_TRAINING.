@@ -10,11 +10,10 @@ form.addEventListener("submit", async function(event) {
     // Capture standard form fields
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
-    const course = document.getElementById("course").value;
     const msgText = document.getElementById("message").value.trim();
 
     // Check that all fields are filled
-    if (!name || !email || !course || !msgText) {
+    if (!name || !email || !msgText) {
         message.style.display = "block";
         message.style.color = "red";
         message.textContent = "Please complete all fields.";
@@ -45,7 +44,6 @@ form.addEventListener("submit", async function(event) {
             body: JSON.stringify({
                 name: name,
                 email: email,
-                course: course,
                 message: msgText
             })
         });
@@ -53,8 +51,7 @@ form.addEventListener("submit", async function(event) {
         if (response.ok) {
             // Success response from API
             message.style.color = "green";
-            // UPDATED MESSAGE BELOW:
-            message.textContent = "Thank you! Your query has been received.";
+            message.textContent = "Query submitted successfully!";
             form.reset();
         } else {
             // Handle error response from serverless database
